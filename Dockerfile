@@ -1,5 +1,5 @@
-FROM python:3.8
-LABEL maintainer=zett@MBP-Irina"
+FROM python
+LABEL maintainer=zett@MBP-Irina
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
@@ -8,4 +8,4 @@ EXPOSE 8181
 VOLUME /app/app/model
 COPY ./docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ['/docker-entrypoint.sh']
