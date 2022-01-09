@@ -8,4 +8,4 @@ EXPOSE 8181
 VOLUME /app/app/model
 COPY ./docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
-ENTRYPOINT ['/docker-entrypoint.sh']
+ENTRYPOINT ["/docker-entrypoint.sh"]
