@@ -2,7 +2,7 @@
 
 Для создания данного приложения была использована база русскоязычных
  комментариев для определения их токсичности в целом 
- https://www.kaggle.com/alexandersemiletov/starter-read-toxic-russian-comments-dataset
+https://www.kaggle.com/alexandersemiletov/toxic-russian-comments
  
  Методы обработки : tfidf
  
