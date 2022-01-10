@@ -54,7 +54,7 @@ def predict():
 
         logger.info(f'{dt} Data: comment={comment}')
         try:
-            preds = model.predict_proba(pd.DataFrame({"comment": [comment]}))
+            preds = model.predict_proba(pd.DataFrame({"text": [comment]}))
         except AttributeError as e:
             logger.warning(f'{dt} Exception: {str(e)}')
             data['predictions'] = str(e)

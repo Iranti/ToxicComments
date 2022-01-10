@@ -17,7 +17,7 @@ app.config.update(
 )
 
 def get_prediction(comment):
-    body = {'comment': comment}
+    body = {'text': comment}
 
     myurl = "http://0.0.0.0:8180/predict"
     req = urllib.request.Request(myurl)
@@ -46,11 +46,11 @@ def predict_form():
     form = ClientDataForm()
     data = dict()
     if request.method == 'POST':
-        data['comment'] = request.form.get('comment')
+        data['text'] = request.form.get('text')
 
 
         try:
-            response = str(get_prediction(data['comment']))
+            response = str(get_prediction(data['text']))
             print(response)
         except ConnectionError:
             response = json.dumps({"error": "ConnectionError"})
